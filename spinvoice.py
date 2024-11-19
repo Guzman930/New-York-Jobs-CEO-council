@@ -22,6 +22,7 @@ class Invoice:
         self.date = datetime.now()
         self.cost = 0
         self.items = []
+        self.comments = []
 
     def add_item(self, name, price, tax):
         # python makes working with trivial data-objects quite easy
@@ -47,6 +48,19 @@ class Invoice:
         total = total - (total * discount/100)
         return total
 
+    def add_comments(self, string):
+        self.comments.append(string)
+    
+    def print_comments(self):
+        string = ""
+        count = 0
+        for com in self.comments:
+            count += 1
+            if count < len(self.comments):
+                string += com + "\n"
+            else:
+                string += com
+        return string
 
 if __name__ == '__main__':
     invoice = Invoice(
@@ -61,5 +75,10 @@ if __name__ == '__main__':
     invoice.add_item("34 floor building", 3400, 0.1)
     invoice.add_item("Equipment Rental", 1000, 0.1)
     invoice.add_item("Fear Tax", 340, 0.0)
+    invoice.add_comments("Late payment")
+    invoice.add_comments("Shortage of equipment")
+    invoice.add_comments("damaged Material")
     invoice_total = invoice.calculate_total(20)
+    all_comments = invoice.print_comments()
     print(invoice_total)
+    print(all_comments)

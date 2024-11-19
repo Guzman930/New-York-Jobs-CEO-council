@@ -16,5 +16,3 @@ Instructions:
 - A percent discount may be applied to the entire invoice.
 - A discount must be applied before tax is determined.
 - An invoice must calculate its total price based on all contained items.
-
-
