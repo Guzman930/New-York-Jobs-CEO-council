@@ -5,5 +5,7 @@ During this program, i got the opportunity to step into the shoes of a software 
 
 ### Task
 Given the file: [spinvoice.py](https://cdn.theforage.com/vinternships/companyassets/9nvkLZzZEKAdrhjrX/m2PZ8KAEvh7fesa2Z/1685571147268/task_1_starter_code.py)
-
-
+I have to find a bug that has something to do with the way discounts are being applied to the final price.
+    
+    ## Instructions
+    
